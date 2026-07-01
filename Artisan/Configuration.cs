@@ -83,6 +83,7 @@ namespace Artisan
 
         public bool EnduranceStopFail = false;
         public bool EnduranceStopNQ = false;
+        public bool ContinueOnRepeatedErrors = false;
 
         public int RepairPercent = 50;
 

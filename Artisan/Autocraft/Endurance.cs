@@ -468,9 +468,16 @@ namespace Artisan.Autocraft
                 //}
 
                 Errors.PushBack(Environment.TickCount64);
-                Svc.Log.Warning($"Error Warnings [{Errors.Count(x => x > Environment.TickCount64 - 10 * 1000)}]: {message}");
-                if (Errors.Count() >= 5 && Errors.All(x => x > Environment.TickCount64 - 10 * 1000))
+                var recentErrorThreshold = Environment.TickCount64 - 10 * 1000;
+                Svc.Log.Warning($"Error Warnings [{Errors.Count(x => x > recentErrorThreshold)}]: {message}");
+                if (Errors.Count() >= 5 && Errors.All(x => x > recentErrorThreshold))
                 {
+                    if (P.Config.ContinueOnRepeatedErrors)
+                    {
+                        Errors.Clear();
+                        return;
+                    }
+
                     Svc.Toasts.ShowError($"Current crafting mode has been {(Enable ? "disabled" : "paused")} due to too many errors in succession.");
                     DuoLog.Error($"Current crafting mode has been {(Enable ? "disabled" : "paused")} due to too many errors in succession.");
                     if (enable)

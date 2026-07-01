@@ -1,0 +1,24 @@
+[
+  {
+    "Author": "Taurenkey (Puni.sh)",
+    "Name": "Artisan",
+    "Punchline": "A 'simple' crafting plugin.",
+    "Description": "The all-in-one crafting plugin.",
+    "InternalName": "Artisan",
+    "AssemblyVersion": "4.0.5.16",
+    "TestingAssemblyVersion": "4.0.5.16",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/TimePurradox/Artisan",
+    "IconUrl": "https://s3.puni.sh/media/plugin/6/icon-3h8wd5b9qr.png",
+    "Tags": [
+      "crafting"
+    ],
+    "DalamudApiLevel": 15,
+    "DownloadLinkInstall": "https://github.com/TimePurradox/Artisan/releases/download/4.0.5.16/latest.zip",
+    "DownloadLinkTesting": "https://github.com/TimePurradox/Artisan/releases/download/4.0.5.16/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/TimePurradox/Artisan/releases/download/4.0.5.16/latest.zip",
+    "DownloadCount": 0,
+    "LastUpdate": 1782914701,
+    "ChangeLog": "- Add an option to continue crafting after repeated game errors.\n- Restore the native Craft All button compatibility for the pinned KamiToolKit dependency."
+  }
+]

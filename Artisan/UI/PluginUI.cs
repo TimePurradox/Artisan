@@ -532,6 +532,9 @@ namespace Artisan.UI
                 }
                 ImGuiComponents.HelpMarker($"Automatically use each recommended action instead of highlighting them.");
 
+                changed |= ImGui.Checkbox("Continue crafting after repeated errors", ref P.Config.ContinueOnRepeatedErrors);
+                ImGuiComponents.HelpMarker("Prevents Artisan from disabling Endurance or pausing crafting lists when several game error messages are received in quick succession. Use only when another automation intentionally causes these errors.");
+
                 if (autoEnabled)
                 {
                     ImGui.Indent();
